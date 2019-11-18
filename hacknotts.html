@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+	<title>Web Assignment</title>
+	<link href="style/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <header>
+    <div class="heroImg" id="hacknottsPage">
+			<div class="heroTxt">
+				<h1>HackNotts</h1>
+			</div>
+		</div>
+
+    <nav>
+			<div class="row">
+				<div class="nav-wrapper">
+					<div class="navbar">
+						<a href="index.html" class="col-2">Home</a>
+						<div class="dropdown col-2">
+							<button class="dropbtn">Societies ▼</button>
+							<div class="dropdown-content">
+								<a href="warlocs.html" class="col-12">Warlocs</a>
+								<a href="medsoc.html" class="col-12">Medieval</a>
+							</div>
+						</div>
+						<a href="hacknotts.html" class="active col-2">Hacknotts</a>
+						<a href="digital-horizons.html" class="col-2">Digital Horizons</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+  </header>
+
+  <br>
+
+  <div class="row">
+    <section>
+      <div class="col-3 side">
+        <a href="https://www.hacknotts.com/">
+          <img src="style/Images/hacknotts.png" alt="=HackNotts Logo"
+          title="HackNotts Page"></a>
+      </div>
+    </section>
+
+    <section>
+      <div class="col-6 content">
+			 <h1><strong>Overview</strong></h1>
+			 <div>
+      	 <p>HackNotts is a yearly Hackathon at the University of Nottingham,
+           hosted by the HackSoc Society. It lasts 24 hours and hosts a
+           variety of activieties, such as learning about hacking or
+           creating teams to compete in various challanges during the 24 hour
+           period. I participated to learn about hacking and how to do it.
+      	 </p>
+      	 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      	 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    	 </div>
+		  </div>
+    </section>
+
+    <section>
+      <div class="col-3 after"></div>
+    </section>
+  </div>
+
+  <footer>
+		<div class="row">
+			<div class="footer">
+				<div id="links" class="col-4">
+					<br>
+					<a href="index.html" class="active">Home</a><br>
+					<a href="warlocs.html">Warlocs</a><br>
+					<a href="medsoc.html">Medieval</a><br>
+					<a href="hacknotts.html">HackNotts</a><br>
+					<a href="digital-horizons.html">Digital Horizons</a><br>
+				</div>
+				<div id="social" class="col-4">
+					<br>
+					<div class="row">
+						<a href="https://www.instagram.com/nogarde/" class="col-6 icon"
+							title="Instgram!"><img src=style/Images/instagram.png
+							alt="Instagram"></a>
+						<a href="https://twitter.com/Nogarde_" class="col-6 icon"
+							title="Twitter!"><img src=style/Images/twitter.png
+							alt="Twitter"></a>
+					</div>
+				</div>
+				<div id="contact" class="col-4">
+					<br>
+					<p>Hassaan Naveed</p>
+					<p>Nottingham Trent University</p>
+					<p>hassaann688@gmail.com</p>
+					<p>07399559326</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+  <script>
+	window.onscroll = function() {navScroll()};
+	var navbar = document.getElementsByClassName("navbar");
+	var sticky = navbar[0].offsetTop;
+
+	function navScroll() {
+		if (window.innerWidth > 768) {
+			if(window.pageYOffset >= sticky) {
+				navbar[0].classList.add("sticky")
+			} else {
+				navbar[0].classList.remove("sticky")
+			}
+		}
+	}
+	</script>
+
+</body>
+
+</html>

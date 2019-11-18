@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+	<title>Web Assignment</title>
+	<link href="style/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <header>
+    <div class="heroImg" id="warlocsPage">
+			<div class="heroTxt">
+				<h1>Warlocs Society</h1>
+			</div>
+		</div>
+
+    <nav>
+			<div class="row">
+				<div class="nav-wrapper">
+					<div class="navbar">
+						<a href="index.html" class="col-2">Home</a>
+						<div class="dropdown col-2">
+							<button class="dropbtn">Societies ▼</button>
+							<div class="dropdown-content">
+								<a href="warlocs.html" class="active col-12">Warlocs</a>
+								<a href="medsoc.html" class="col-12">Medieval</a>
+							</div>
+						</div>
+						<a href="hacknotts.html" class="col-2">Hacknotts</a>
+						<a href="digital-horizons.html" class="col-2">Digital Horizons</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+  </header>
+
+  <br>
+
+  <div class="row">
+    <section>
+      <div class="col-3 side">
+        <a href="https://www.trentstudents.org/groups/warlocs">
+          <img src="style/Images/warlocs.jpg" alt="Warlocs Logo"
+          title="Warlocs NTSU Page"></a>
+        </div>
+    </section>
+
+    <section>
+      <div class="col-6 content">
+			 <h1><strong>Overview</strong></h1>
+			 <div>
+      	 <p>
+           The Nottingham Trent Students Union Warlocs Society focuses
+           on tabletop gaming such as Role-Playing, Wargaming, Board games
+           and Card games. Different sessions are held during the week for
+           different activieties. I attend the Card and Board games session,
+           held weekly on Thursdays from 6pm until 10pm.
+         </p>
+         <h1><strong>Card and Board Games</strong></h1>
+         <p>
+           The Card and Board Games night occurs every Thursday in the
+           Students Union building at the City campus. There is a very wide
+           selection of board games to play.
+         </p>
+      	 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      	 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    	 </div>
+		  </div>
+    </section>
+
+    <section>
+      <div class="col-3 after"></div>
+    </section>
+  </div>
+
+  <footer>
+		<div class="row">
+			<div class="footer">
+				<div id="links" class="col-4">
+					<br>
+					<a href="index.html" class="active">Home</a><br>
+					<a href="warlocs.html">Warlocs</a><br>
+					<a href="medsoc.html">Medieval</a><br>
+					<a href="hacknotts.html">HackNotts</a><br>
+					<a href="digital-horizons.html">Digital Horizons</a><br>
+				</div>
+				<div id="social" class="col-4">
+					<br>
+					<div class="row">
+						<a href="https://www.instagram.com/nogarde/" class="col-6 icon"
+							title="Instgram!"><img src=style/Images/instagram.png
+							alt="Instagram"></a>
+						<a href="https://twitter.com/Nogarde_" class="col-6 icon"
+							title="Twitter!"><img src=style/Images/twitter.png
+							alt="Twitter"></a>
+					</div>
+				</div>
+				<div id="contact" class="col-4">
+					<br>
+					<p>Hassaan Naveed</p>
+					<p>Nottingham Trent University</p>
+					<p>hassaann688@gmail.com</p>
+					<p>07399559326</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+  <script>
+	window.onscroll = function() {navScroll()};
+	var navbar = document.getElementsByClassName("navbar");
+	var sticky = navbar[0].offsetTop;
+
+	function navScroll() {
+		if (window.innerWidth > 768) {
+			if(window.pageYOffset >= sticky) {
+				navbar[0].classList.add("sticky")
+			} else {
+				navbar[0].classList.remove("sticky")
+			}
+		}
+	}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" name="viewport"
+		content="width=device-width, inital-scale=1, minimum-scale=1">
+	<title>Web Assignment</title>
+	<link href="style\css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<header>
+		<div class="heroImg" id="mainPage">
+			<div class="heroTxt">
+				<h1>Extra-Curricular Activities</h1>
+				<p>Web Assignment - Hassaan Naveed</p>
+			</div>
+		</div>
+
+		<nav>
+			<div class="row">
+				<div class="nav-wrapper">
+					<div class="navbar">
+						<a href="index.html" class="active col-2">Home</a>
+						<div class="dropdown col-2">
+							<button class="dropbtn">Societies ▼</button>
+							<div class="dropdown-content">
+								<a href="warlocs.html" class="col-12">Warlocs</a>
+								<a href="medsoc.html" class="col-12">Medieval</a>
+							</div>
+						</div>
+						<a href="hacknotts.html" class="col-2">Hacknotts</a>
+						<a href="digital-horizons.html" class="col-2">Digital Horizons</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<br>
+
+	<div class="row">
+		<section>
+			<div class="col-3 side"></div>
+		</section>
+
+		<section>
+			<div class="col-6 content">
+				<h1><strong>Introduction</strong></h1>
+				<div>
+      		<p>
+						Welcome to this website! This blog is for documenting all
+						extra-curricular activities I take part in during term 1 at
+						Nottingham Trent University. This will be used as documentation
+						and proof for the Term 1 CPD Assignment, also serving as the
+						submission for the Web assignment.
+      		</p>
+					<br>
+					<h1><strong>About Me</strong></h1>
+					<p>
+						My name is Hassaan Naveed. I am a First Year student at
+						Nottingham Trent University, studying Computer Science.
+						Contact information can be found at the bottom of the page.
+					</p>
+					<p>
+						My hobbies include playing video games, playing the guitar,
+						and reading!
+					</p>
+					<br>
+					<h1><strong>Activities</strong></h1>
+					<p>
+						I have participated in a variety of activities so far, this
+						includes joining a variety of societies such as Warlocs, the
+						Medieval Society, and DevSoc. I have also taken part in events such
+						as HackNotts, hosted by DevSoc in conjuction with the University
+						of Nottingham HackSoc. During the Digital Horizons Week I also
+						attended several activities, such as the Google Assisstant talk
+						and challange.
+					</p>
+					<p>
+						More details of these events can be found throughout the pages
+						on this website.
+					</p>
+    		</div>
+				<br><br>
+			</div>
+		</section>
+
+		<section>
+			<div class="col-3 after"></div>
+		</section>
+	</div>
+
+	<br>
+
+	<footer>
+		<div class="row">
+			<div class="footer">
+				<div id="links" class="col-4">
+					<br>
+					<a href="index.html" class="active">Home</a><br>
+					<a href="warlocs.html">Warlocs</a><br>
+					<a href="medsoc.html">Medieval</a><br>
+					<a href="hacknotts.html">HackNotts</a><br>
+					<a href="digital-horizons.html">Digital Horizons</a><br>
+				</div>
+				<div id="social" class="col-4">
+					<br>
+					<div class="row">
+						<a href="https://www.instagram.com/nogarde/" class="col-6 icon"
+							title="Instgram!"><img src=style/Images/instagram.png
+							alt="Instagram"></a>
+						<a href="https://twitter.com/Nogarde_" class="col-6 icon"
+							title="Twitter!"><img src=style/Images/twitter.png
+							alt="Twitter"></a>
+					</div>
+				</div>
+				<div id="contact" class="col-4">
+					<br>
+					<p>Hassaan Naveed</p>
+					<p>Nottingham Trent University</p>
+					<p>hassaann688@gmail.com</p>
+					<p>07399559326</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script>
+	window.onscroll = function() {navScroll()};
+	var navbar = document.getElementsByClassName("navbar");
+	var sticky = navbar[0].offsetTop;
+
+	function navScroll() {
+		if (window.innerWidth <= 768) {
+			navbar[0].classList.remove("sticky")
+		} else {
+			if(window.pageYOffset >= sticky) {
+				navbar[0].classList.add("sticky")
+			} else {
+				navbar[0].classList.remove("sticky")
+			}
+		}
+	}
+	</script>
+</body>
+
+</html>

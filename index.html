@@ -8,14 +8,18 @@
 </head>
 
 <body>
+	<!--Header same across all pages, except for hero image and text-->
 	<header>
-		<div class="heroImg" id="mainPage">
-			<div class="heroTxt">
-				<h1>Extra-Curricular Activities</h1>
-				<p>Web Assignment - Hassaan Naveed</p>
+		<!--Creating the hero image for the main page-->
+		<div class="row">
+			<div class="col-12 heroImg" id="mainPage">
+				<div class="heroTxt">
+					<h1>Extra Curricular Activities</h1>
+				</div>
 			</div>
 		</div>
-
+		<!--Creating the navigation bar-->
+		<!--Using reponsive grid for mobile devices-->
 		<nav>
 			<div class="row">
 				<div class="nav-wrapper">
@@ -36,17 +40,22 @@
 		</nav>
 	</header>
 
-	<br>
 
+	<!--Main body of page -->
+
+	<!--Using a 3-column layout for responsivity-->
+	<!--Any links to external sites go in the leftmost column-->
 	<div class="row">
 		<section>
 			<div class="col-3 side"></div>
 		</section>
 
+		<!--Main text goes in middle column-->
+		<!--Each section of text is an individual div for structuring-->
 		<section>
 			<div class="col-6 content">
-				<h1><strong>Introduction</strong></h1>
 				<div>
+					<h1><strong>Introduction</strong></h1>
       		<p>
 						Welcome to this website! This blog is for documenting all
 						extra-curricular activities I take part in during term 1 at
@@ -54,7 +63,8 @@
 						and proof for the Term 1 CPD Assignment, also serving as the
 						submission for the Web assignment.
       		</p>
-					<br>
+				</div>
+				<div>
 					<h1><strong>About Me</strong></h1>
 					<p>
 						My name is Hassaan Naveed. I am a First Year student at
@@ -65,7 +75,8 @@
 						My hobbies include playing video games, playing the guitar,
 						and reading!
 					</p>
-					<br>
+				</div>
+				<div>
 					<h1><strong>Activities</strong></h1>
 					<p>
 						I have participated in a variety of activities so far, this
@@ -78,33 +89,48 @@
 					</p>
 					<p>
 						More details of these events can be found throughout the pages
-						on this website.
+						on this website. A summary can be found below.
 					</p>
     		</div>
-				<br><br>
+				<div>
+					<h1><strong>Summary of Hours</strong></h1>
+					<ul>
+						<li>Warlocs Society - 10 hours</li>
+						<li>Medieval Society - 10 hours</li>
+						<li>HackNotts - 7 hours</li>
+						<li>Digital Horizons - 6 hours</li>
+					</ul>
+				</div>
 			</div>
 		</section>
 
+		<!--Final row for completing the 3-column layout and keeping main text in
+				center of page-->
 		<section>
 			<div class="col-3 after"></div>
 		</section>
 	</div>
 
-	<br>
+
+	<!--Footer at bottom of page-->
+	<!--Footer also divided into 3 columns for responsivity-->
+	<!--Footer is the same across all pages in site-->
 
 	<footer>
 		<div class="row">
 			<div class="footer">
+				<!--First column contains links to all pages on this site-->
 				<div id="links" class="col-4">
-					<br>
-					<a href="index.html" class="active">Home</a><br>
-					<a href="warlocs.html">Warlocs</a><br>
-					<a href="medsoc.html">Medieval</a><br>
-					<a href="hacknotts.html">HackNotts</a><br>
-					<a href="digital-horizons.html">Digital Horizons</a><br>
+					<a href="index.html">Home</a>
+					<a href="warlocs.html">Warlocs</a>
+					<a href="medsoc.html">Medieval</a>
+					<a href="hacknotts.html">HackNotts</a>
+					<a href="digital-horizons.html">Digital Horizons</a>
 				</div>
+				<!--Second column contains links to social media-->
+				<!--Subdivided into a further 2 columns, so the images appear
+						horizontally rather than vertically-->
 				<div id="social" class="col-4">
-					<br>
 					<div class="row">
 						<a href="https://www.instagram.com/nogarde/" class="col-6 icon"
 							title="Instgram!"><img src=style/Images/instagram.png
@@ -114,8 +140,8 @@
 							alt="Twitter"></a>
 					</div>
 				</div>
+				<!--Final column contains contact information-->
 				<div id="contact" class="col-4">
-					<br>
 					<p>Hassaan Naveed</p>
 					<p>Nottingham Trent University</p>
 					<p>hassaann688@gmail.com</p>
@@ -125,15 +151,26 @@
 		</div>
 	</footer>
 
+
+	<!--script for adding some js functionality-->
+
+
 	<script>
+	// making navigation bar sticky
+
+	//if the users scrolls the page, call navScroll function
 	window.onscroll = function() {navScroll()};
 	var navbar = document.getElementsByClassName("navbar");
 	var sticky = navbar[0].offsetTop;
 
 	function navScroll() {
+		//if the width is less than 768, remove sticky class
+		//this is to save screen space on mobile devices
 		if (window.innerWidth <= 768) {
 			navbar[0].classList.remove("sticky")
 		} else {
+			//otherwise, if the user scrolls past the navbar...
+			//add the sticky class
 			if(window.pageYOffset >= sticky) {
 				navbar[0].classList.add("sticky")
 			} else {

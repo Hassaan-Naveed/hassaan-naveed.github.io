@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+	<meta charset="utf-8" name="viewport"
+		content="width=device-width, inital-scale=1, minimum-scale=1">
 	<title>Web Assignment</title>
-	<link href="style/css.css" rel="stylesheet" type="text/css">
+	<link href="style\css.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -34,8 +35,6 @@
 		</nav>
   </header>
 
-  <br>
-
   <div class="row">
     <section>
       <div class="col-3 side">
@@ -47,16 +46,58 @@
 
     <section>
       <div class="col-6 content">
-			 <h1><strong>Overview</strong></h1>
 			 <div>
+				 <h1><strong>Overview</strong></h1>
       	 <p>HackNotts is a yearly Hackathon at the University of Nottingham,
            hosted by the HackSoc Society. It lasts 24 hours and hosts a
-           variety of activieties, such as learning about hacking or
-           creating teams to compete in various challanges during the 24 hour
-           period. I participated to learn about hacking and how to do it.
+           variety of activieties, such as learning about hacking/programming
+           and using git or creating teams to compete in various challanges
+           during the 24 hour period. I participated to learn about how it
+           works in order to be able to fully participate next year.
       	 </p>
-      	 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      	 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			 </div>
+			 <div>
+         <h1><strong>Morning</strong></h1>
+         <p>
+           We arrived at the UoN Junilee Campus at 10am where we had breakfast,
+           we were then led to a lecture theatre at 11 to be given a
+           presentation on how the day was going to work, and to meet the
+           companies sponsoring the event. These included GitHub, Capital
+           One, Netcraft, and Starling Bank.
+         </p>
+         <p>
+           After this we went back to the main room where we then had to decide
+           our teams and th eproject we were going to create. Each company had
+           challanges, such as using their API to create something, but since
+           we were new to hackathons and not everyone in our was experienced
+           with programming, our group decided to do a simple program without
+           competing.
+         </p>
+			 </div>
+			 <div>
+         <h1><strong>Afternoon</strong></h1>
+         <p>
+           Hacking began at 12. The program we decided to create was a
+           slightly complex nickname generator in python, based on video
+           game characters by the game director Hideo Kojima.
+         </p>
+         <p>
+           We spent approximately 3-4 hours coding, following the structure of
+           a paper questionnaire and translating it into python. We used pair
+           programming, where one of us was coding while the others in our
+           group were assisting. We took intermittent breaks to play various
+           games that were provided, such as Super Smash Bros.
+         </p>
+			  </div>
+				<div>
+         <h1><strong>Evening</strong></h1>
+         <p>
+           We finished coding the program at approximately 4pm, and we stayed
+           until 5pm before deciding to leave. Next year, when I have more
+           experience, I will stay for th efull 24 hours and compete in the
+           hackathon.
+         </p>
+			  </div>
     	 </div>
 		  </div>
     </section>
@@ -64,21 +105,33 @@
     <section>
       <div class="col-3 after"></div>
     </section>
+
+    <section>
+      <div class="col-12 images">
+        <div class="col-4 img1">
+          <img src="style/Images/hack1.jpg" alt="Picture of HackNotts room">
+        </div>
+        <div class="col-4 img2">
+          <img src="style/Images/hack2.jpg" alt="Picture of code">
+        </div>
+        <div class="col-4 img3">
+          <img src="style/Images/hack3.jpg" alt="Picture of group">
+        </div>
+      </div>
+    </section>
   </div>
 
   <footer>
 		<div class="row">
 			<div class="footer">
 				<div id="links" class="col-4">
-					<br>
-					<a href="index.html" class="active">Home</a><br>
-					<a href="warlocs.html">Warlocs</a><br>
-					<a href="medsoc.html">Medieval</a><br>
-					<a href="hacknotts.html">HackNotts</a><br>
-					<a href="digital-horizons.html">Digital Horizons</a><br>
+					<a href="index.html">Home</a>
+					<a href="warlocs.html">Warlocs</a>
+					<a href="medsoc.html">Medieval</a>
+					<a href="hacknotts.html">HackNotts</a>
+					<a href="digital-horizons.html">Digital Horizons</a>
 				</div>
 				<div id="social" class="col-4">
-					<br>
 					<div class="row">
 						<a href="https://www.instagram.com/nogarde/" class="col-6 icon"
 							title="Instgram!"><img src=style/Images/instagram.png
@@ -89,7 +142,6 @@
 					</div>
 				</div>
 				<div id="contact" class="col-4">
-					<br>
 					<p>Hassaan Naveed</p>
 					<p>Nottingham Trent University</p>
 					<p>hassaann688@gmail.com</p>
@@ -99,13 +151,15 @@
 		</div>
 	</footer>
 
-  <script>
+	<script>
 	window.onscroll = function() {navScroll()};
 	var navbar = document.getElementsByClassName("navbar");
 	var sticky = navbar[0].offsetTop;
 
 	function navScroll() {
-		if (window.innerWidth > 768) {
+		if (window.innerWidth <= 768) {
+			navbar[0].classList.remove("sticky")
+		} else {
 			if(window.pageYOffset >= sticky) {
 				navbar[0].classList.add("sticky")
 			} else {

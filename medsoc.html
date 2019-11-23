@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+	<meta charset="utf-8" name="viewport"
+		content="width=device-width, inital-scale=1, minimum-scale=1">
 	<title>Web Assignment</title>
-	<link href="style/css.css" rel="stylesheet" type="text/css">
+	<link href="style\css.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -34,7 +35,6 @@
 		</nav>
   </header>
 
-  <br>
 
   <div class="row">
     <section>
@@ -47,8 +47,8 @@
 
     <section>
       <div class="col-6 content">
-			 <h1><strong>Overview</strong></h1>
 			 <div>
+				 <h1><strong>Overview</strong></h1>
       	 <p>The Medieval society represents the Nottingham Historia Normannis
            group. They aim to perform live recreations of historical battles,
            using real steel armour and weaponry. There are two main branches
@@ -65,7 +65,9 @@
            aims to teach people controlled medieval combat, in preparation
            for the battle recreatiuons. This occurs every sunday at the
            Arboretum from 11am until 4pm. I attend the combat sessions.
-         </p><br>
+         </p>
+			 </div>
+			 <div>
          <h1><strong>Combat</strong></h1>
          <p>
            I attend the combate training sessions every Sunday at The
@@ -74,7 +76,8 @@
            learn safety and control. I enjoy using either a shield and a
            wooden knife, or a wooden spear.
          </p>
-         <br>
+			 </div>
+			 <div>
          <h1><strong>Session 1</strong></h1>
          <p>
            In the first session I went to. we were trained to control the
@@ -86,7 +89,8 @@
            into the "arena", where we did free-for-all and group training.
            This lasted for 5 hours.
          </p>
-         <br>
+			  </div>
+        <div>
          <h1><strong>Session 2</strong></h1>
          <p>
            My second session was a couple of weeks later, as a session the
@@ -94,10 +98,9 @@
            train in a different weapon - the spear. After learning how to
            properly and safely control it, I was able to use it in the "arena".
            During the line fights I ended up performing well. This lasted
-           another 5 hours.
+           another 5 hours. I have not been able to attend many more sessions
+					 past this yet due to rain or doing other activities.
          </p>
-      	 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      	 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     	 </div>
 		  </div>
     </section>
@@ -107,19 +110,31 @@
     </section>
   </div>
 
+	<section>
+		<div class="col-12 images">
+			<div class="col-4 img1">
+				<img src="style/Images/med1.jpg" alt="Picture of shields">
+			</div>
+			<div class="col-4 img2">
+				<img src="style/Images/med2.jpg" alt="Picture of shields">
+			</div>
+			<div class="col-4 img3">
+				<img src="style/Images/med3.jpg" alt="Picture of people with shields">
+			</div>
+		</div>
+	</section>
+
   <footer>
 		<div class="row">
 			<div class="footer">
 				<div id="links" class="col-4">
-					<br>
-					<a href="index.html" class="active">Home</a><br>
-					<a href="warlocs.html">Warlocs</a><br>
-					<a href="medsoc.html">Medieval</a><br>
-					<a href="hacknotts.html">HackNotts</a><br>
-					<a href="digital-horizons.html">Digital Horizons</a><br>
+					<a href="index.html">Home</a>
+					<a href="warlocs.html">Warlocs</a>
+					<a href="medsoc.html">Medieval</a>
+					<a href="hacknotts.html">HackNotts</a>
+					<a href="digital-horizons.html">Digital Horizons</a>
 				</div>
 				<div id="social" class="col-4">
-					<br>
 					<div class="row">
 						<a href="https://www.instagram.com/nogarde/" class="col-6 icon"
 							title="Instgram!"><img src=style/Images/instagram.png
@@ -130,7 +145,6 @@
 					</div>
 				</div>
 				<div id="contact" class="col-4">
-					<br>
 					<p>Hassaan Naveed</p>
 					<p>Nottingham Trent University</p>
 					<p>hassaann688@gmail.com</p>
@@ -140,13 +154,15 @@
 		</div>
 	</footer>
 
-  <script>
+	<script>
 	window.onscroll = function() {navScroll()};
 	var navbar = document.getElementsByClassName("navbar");
 	var sticky = navbar[0].offsetTop;
 
 	function navScroll() {
-		if (window.innerWidth > 768) {
+		if (window.innerWidth <= 768) {
+			navbar[0].classList.remove("sticky")
+		} else {
 			if(window.pageYOffset >= sticky) {
 				navbar[0].classList.add("sticky")
 			} else {

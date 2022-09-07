@@ -1,0 +1,9 @@
+body {
+    padding-top: 80px;
+}
+
+img {
+    display: block;
+    width: 50%;
+    height: auto;
+  }
